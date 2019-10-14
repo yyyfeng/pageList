@@ -1,0 +1,32 @@
+server:
+  port: 8888
+  servlet:
+    jsp:
+      init-parameters:
+        develop: true
+spring:
+  datasource:
+    username: frochy
+    password: frochy
+    url: jdbc:mysql://192.168.198.131:3306/student_check?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+   -- driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1024MB
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: cn.frochy.model
+
+logging:
+  level:
+    cn:
+      frochy: debug
+    org:
+      springframework: info
+
+file:
+  path: E:/files/
+
+
+#debug: true

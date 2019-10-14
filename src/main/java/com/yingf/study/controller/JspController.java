@@ -28,4 +28,9 @@ public class JspController {
             model.addAttribute("list",list);
             return "jspIndex";
     }
+    @RequestMapping("fileUpload")
+    public String  fileUpload(String filePath,Model model ){
+        System.out.println("filePath :"+filePath );
+        return "fileUpload";
+    }
 }
